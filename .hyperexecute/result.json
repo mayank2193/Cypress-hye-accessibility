@@ -1,0 +1,109 @@
+{
+    "id": "655ab811-925b-419e-a78b-099e1472765f",
+    "created_at": "2024-08-16T09:33:43Z",
+    "update_at": "2024-08-16T09:38:25Z",
+    "global_timeout": 90,
+    "tunnel_name": "",
+    "start_time": "2024-08-16T09:33:52Z",
+    "end_time": "2024-08-16T09:38:25Z",
+    "summary": {
+        "total_time": 273000000000,
+        "execution_time": 273000000000,
+        "total_tasks": 1,
+        "build_time_consumed": 273000000000,
+        "jobTestExecutionTime": "2m35s",
+        "failed_tasks": 0,
+        "total_stage_info": {
+            "postrun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "scenario": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 1
+            }
+        },
+        "status": "completed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=655ab811-925b-419e-a78b-099e1472765f"
+    },
+    "tasks": [
+        {
+            "id": "104fd850-a1a6-497e-9ead-95d0432d3493",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2024-08-16T09:33:51Z",
+            "update_at": "2024-08-16T09:38:25Z",
+            "start_time": "2024-08-16T09:33:52Z",
+            "end_time": "2024-08-16T09:38:25Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "f3371f25-f3cb-44c2-97be-63f165a07083",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2024-08-16T09:33:52Z",
+                    "started_at": "2024-08-16T09:33:52Z",
+                    "updated_at": "2024-08-16T09:35:28.101476672Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "ad355fc3-cf15-487b-936d-d33c5c7540c0",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2024-08-16T09:35:28Z",
+                    "started_at": "2024-08-16T09:35:28Z",
+                    "updated_at": "2024-08-16T09:35:28.309597098Z",
+                    "order": 3,
+                    "task_number": 1
+                },
+                {
+                    "id": "ae43ee79-3e3f-4119-ab24-841e5005ab81",
+                    "type": "scenario",
+                    "status": "completed",
+                    "name": "action.cy.js",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2024-08-16T09:35:28Z",
+                    "started_at": "2024-08-16T09:35:45Z",
+                    "updated_at": "2024-08-16T09:38:24.848730143Z",
+                    "order": 4,
+                    "task_number": 1
+                },
+                {
+                    "id": "92c0f0d5-8da0-4b5d-9b11-5a92857b5885",
+                    "type": "postrun",
+                    "status": "completed",
+                    "name": "post",
+                    "iteration": 0,
+                    "link": "post.log",
+                    "created_at": "2024-08-16T09:35:28Z",
+                    "started_at": "2024-08-16T09:38:25Z",
+                    "updated_at": "2024-08-16T09:38:25.338501841Z",
+                    "order": 5,
+                    "task_number": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "cy10",
+  "version": "1.0.0",
+  "description": "Cypress Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "project"
+  ],
+  "author": "Asad Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "@reportportal/agent-js-cypress": "^5.0.4",
+    "cypress": "10.7.0",
+    "reportportal-js-client": "^2.2.1",
+    "mochawesome": "^6.1.1",
+    "cypress-multi-reporters": ""
+  }
+}

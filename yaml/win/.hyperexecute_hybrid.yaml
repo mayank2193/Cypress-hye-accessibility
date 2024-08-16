@@ -1,0 +1,35 @@
+---
+version: 0.1
+globalTimeout: 100
+testSuiteTimeout: 90
+testSuiteStep: 90
+retryOnFailure: false
+runson: ${matrix.os}
+cypress: true
+maxRetries: 1
+parallelism: 1
+concurrency: 2
+autosplit: true
+pre:
+  - npm install
+  - npm install cypress --save-dev
+cacheKey: '{{ checksum "package.json" }}'
+cacheDirectories:
+  - node_modules
+matrix:
+   os: [win]
+   browser: ["chrome-103.0","chrome-104.0","chrome-105.0"]
+testDiscovery:
+  mode: dynamic
+  type: raw
+  command: ls cypress/e2e/2-advanced-examples
+
+testRunnerCommand: npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$test --browser=${matrix.browser} --headed --config video=false
+
+cypressOps:
+ Build: "Hyperexecute Cypress Sample Build"
+ Tags: ["Hyperexecute","Cypress", "Windows", "Hybrid"]
+ BuildTags: ["Hyperexecute-Cypress"]
+
+
+jobLabel: [cypress-v10, win, hybrid]

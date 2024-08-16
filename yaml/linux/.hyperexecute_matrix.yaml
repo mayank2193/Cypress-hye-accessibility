@@ -1,0 +1,31 @@
+---
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+retryOnFailure: false
+runson: ${matrix.os}
+cypress: true
+maxRetries: 2
+parallelism: 1
+concurrency: 2
+pre:
+  - npm install
+  - npm install cypress --save-dev
+cacheKey: '{{ checksum "package.json" }}'
+cacheDirectories:
+  - node_modules
+matrix:
+   os: [linux]
+   browser: ["chrome-103.0","chrome-104.0","chrome-105.0"]
+   files: ["actions.cy.js"]
+testSuites: 
+  - npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$files --browser=$browser --headed --config video=false
+cypressOps:
+ Build: "Hyperexecute Cypress Sample Build"
+ Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
+ BuildTags: ["Hyperexecute-Cypress"]
+post:
+  - cat yaml/linux/.hyperexecute_matrix.yaml
+
+jobLabel: [cypress-v10, linux, matrix]
